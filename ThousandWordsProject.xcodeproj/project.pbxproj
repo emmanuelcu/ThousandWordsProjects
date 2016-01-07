@@ -16,6 +16,9 @@
 		2AAF2A341C3D8A5A00140077 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AAF2A321C3D8A5A00140077 /* LaunchScreen.storyboard */; };
 		2AAF2A3F1C3D8A5A00140077 /* ThousandWordsProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF2A3E1C3D8A5A00140077 /* ThousandWordsProjectTests.m */; };
 		2AAF2A4A1C3D8A5A00140077 /* ThousandWordsProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF2A491C3D8A5A00140077 /* ThousandWordsProjectUITests.m */; };
+		2AAF2A591C3D8B6B00140077 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF2A581C3D8B6B00140077 /* TableViewController.m */; };
+		2AAF2A5E1C3D8F0200140077 /* Album+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF2A5B1C3D8F0200140077 /* Album+CoreDataProperties.m */; };
+		2AAF2A5F1C3D8F0200140077 /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF2A5D1C3D8F0200140077 /* Album.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,12 @@
 		2AAF2A451C3D8A5A00140077 /* ThousandWordsProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThousandWordsProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AAF2A491C3D8A5A00140077 /* ThousandWordsProjectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThousandWordsProjectUITests.m; sourceTree = "<group>"; };
 		2AAF2A4B1C3D8A5A00140077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AAF2A571C3D8B6B00140077 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		2AAF2A581C3D8B6B00140077 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		2AAF2A5A1C3D8F0200140077 /* Album+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Album+CoreDataProperties.h"; path = "../Album+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2AAF2A5B1C3D8F0200140077 /* Album+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Album+CoreDataProperties.m"; path = "../Album+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2AAF2A5C1C3D8F0200140077 /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Album.h; path = ../Album.h; sourceTree = "<group>"; };
+		2AAF2A5D1C3D8F0200140077 /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Album.m; path = ../Album.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +117,12 @@
 				2AAF2A271C3D8A5A00140077 /* ViewController.h */,
 				2AAF2A281C3D8A5A00140077 /* ViewController.m */,
 				2AAF2A2A1C3D8A5A00140077 /* Main.storyboard */,
+				2AAF2A571C3D8B6B00140077 /* TableViewController.h */,
+				2AAF2A581C3D8B6B00140077 /* TableViewController.m */,
+				2AAF2A5A1C3D8F0200140077 /* Album+CoreDataProperties.h */,
+				2AAF2A5B1C3D8F0200140077 /* Album+CoreDataProperties.m */,
+				2AAF2A5C1C3D8F0200140077 /* Album.h */,
+				2AAF2A5D1C3D8F0200140077 /* Album.m */,
 				2AAF2A301C3D8A5A00140077 /* Assets.xcassets */,
 				2AAF2A321C3D8A5A00140077 /* LaunchScreen.storyboard */,
 				2AAF2A351C3D8A5A00140077 /* Info.plist */,
@@ -276,7 +291,10 @@
 				2AAF2A291C3D8A5A00140077 /* ViewController.m in Sources */,
 				2AAF2A261C3D8A5A00140077 /* AppDelegate.m in Sources */,
 				2AAF2A231C3D8A5A00140077 /* main.m in Sources */,
+				2AAF2A591C3D8B6B00140077 /* TableViewController.m in Sources */,
 				2AAF2A2F1C3D8A5A00140077 /* ThousandWordsProject.xcdatamodeld in Sources */,
+				2AAF2A5F1C3D8F0200140077 /* Album.m in Sources */,
+				2AAF2A5E1C3D8F0200140077 /* Album+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
