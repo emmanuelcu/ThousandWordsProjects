@@ -8,6 +8,7 @@
 
 #import "TableViewController.h"
 #import "Album.h"
+#import "CoreDataHelper.h"
 
 @interface TableViewController ()
 
@@ -48,6 +49,25 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Album"];
+    fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES]];
+    
+    //This lines of code were removed becaused the CoreDataHelper was added.
+//    id delegate = [[UIApplication sharedApplication] delegate];
+//    NSManagedObjectContext *context = [delegate managedObjectContext];
+    
+    NSError *error = nil;
+    //The word context was replaced for the class imported from the CoreDataHelper
+    NSArray *fetchAlbums = [/*context*/ [CoreDataHelper managedObjectContext] executeFetchRequest:fetchRequest error:&error];
+    
+    
+    self.albums = [fetchAlbums mutableCopy];
+    [self.tableView reloadData];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -60,8 +80,10 @@
 
 -(Album *)albumWithName:(NSString *)name
 {
-    id delegate = [[UIApplication sharedApplication] delegate];
-    NSManagedObjectContext *context = [delegate managedObjectContext];
+    //This lines of code were removed becaused the CoreDataHelper was added.
+//    id delegate = [[UIApplication sharedApplication] delegate];
+    
+    NSManagedObjectContext *context = [CoreDataHelper managedObjectContext]/*[delegate managedObjectContext] "The value of this variable was replaced by the new class CoreDataHelper" */;
     
     Album *album = [NSEntityDescription insertNewObjectForEntityForName:@"Album" inManagedObjectContext:context];
     album.name = name;

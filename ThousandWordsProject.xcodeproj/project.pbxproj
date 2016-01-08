@@ -19,6 +19,10 @@
 		2AAF2A591C3D8B6B00140077 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF2A581C3D8B6B00140077 /* TableViewController.m */; };
 		2AAF2A5E1C3D8F0200140077 /* Album+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF2A5B1C3D8F0200140077 /* Album+CoreDataProperties.m */; };
 		2AAF2A5F1C3D8F0200140077 /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF2A5D1C3D8F0200140077 /* Album.m */; };
+		2AAF2A621C3F1C4D00140077 /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF2A611C3F1C4D00140077 /* CoreDataHelper.m */; };
+		2AAF2A651C3F2CA600140077 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF2A641C3F2CA600140077 /* CollectionViewController.m */; };
+		2AAF2A681C3F329200140077 /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF2A671C3F329200140077 /* PhotoCollectionViewCell.m */; };
+		2AAF2A6A1C40128500140077 /* Cute_dog in Resources */ = {isa = PBXBuildFile; fileRef = 2AAF2A691C40128500140077 /* Cute_dog */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +66,13 @@
 		2AAF2A5B1C3D8F0200140077 /* Album+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Album+CoreDataProperties.m"; path = "../Album+CoreDataProperties.m"; sourceTree = "<group>"; };
 		2AAF2A5C1C3D8F0200140077 /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Album.h; path = ../Album.h; sourceTree = "<group>"; };
 		2AAF2A5D1C3D8F0200140077 /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Album.m; path = ../Album.m; sourceTree = "<group>"; };
+		2AAF2A601C3F1C4D00140077 /* CoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataHelper.h; sourceTree = "<group>"; };
+		2AAF2A611C3F1C4D00140077 /* CoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelper.m; sourceTree = "<group>"; };
+		2AAF2A631C3F2CA600140077 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		2AAF2A641C3F2CA600140077 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		2AAF2A661C3F329200140077 /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		2AAF2A671C3F329200140077 /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		2AAF2A691C40128500140077 /* Cute_dog */ = {isa = PBXFileReference; lastKnownFileType = file; name = Cute_dog; path = ../../../../Downloads/Cute_dog; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,8 +128,14 @@
 				2AAF2A271C3D8A5A00140077 /* ViewController.h */,
 				2AAF2A281C3D8A5A00140077 /* ViewController.m */,
 				2AAF2A2A1C3D8A5A00140077 /* Main.storyboard */,
+				2AAF2A631C3F2CA600140077 /* CollectionViewController.h */,
+				2AAF2A641C3F2CA600140077 /* CollectionViewController.m */,
+				2AAF2A661C3F329200140077 /* PhotoCollectionViewCell.h */,
+				2AAF2A671C3F329200140077 /* PhotoCollectionViewCell.m */,
 				2AAF2A571C3D8B6B00140077 /* TableViewController.h */,
 				2AAF2A581C3D8B6B00140077 /* TableViewController.m */,
+				2AAF2A601C3F1C4D00140077 /* CoreDataHelper.h */,
+				2AAF2A611C3F1C4D00140077 /* CoreDataHelper.m */,
 				2AAF2A5A1C3D8F0200140077 /* Album+CoreDataProperties.h */,
 				2AAF2A5B1C3D8F0200140077 /* Album+CoreDataProperties.m */,
 				2AAF2A5C1C3D8F0200140077 /* Album.h */,
@@ -135,6 +152,7 @@
 		2AAF2A211C3D8A5A00140077 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2AAF2A691C40128500140077 /* Cute_dog */,
 				2AAF2A221C3D8A5A00140077 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -264,6 +282,7 @@
 				2AAF2A341C3D8A5A00140077 /* LaunchScreen.storyboard in Resources */,
 				2AAF2A311C3D8A5A00140077 /* Assets.xcassets in Resources */,
 				2AAF2A2C1C3D8A5A00140077 /* Main.storyboard in Resources */,
+				2AAF2A6A1C40128500140077 /* Cute_dog in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,10 +310,13 @@
 				2AAF2A291C3D8A5A00140077 /* ViewController.m in Sources */,
 				2AAF2A261C3D8A5A00140077 /* AppDelegate.m in Sources */,
 				2AAF2A231C3D8A5A00140077 /* main.m in Sources */,
+				2AAF2A681C3F329200140077 /* PhotoCollectionViewCell.m in Sources */,
 				2AAF2A591C3D8B6B00140077 /* TableViewController.m in Sources */,
 				2AAF2A2F1C3D8A5A00140077 /* ThousandWordsProject.xcdatamodeld in Sources */,
 				2AAF2A5F1C3D8F0200140077 /* Album.m in Sources */,
+				2AAF2A621C3F1C4D00140077 /* CoreDataHelper.m in Sources */,
 				2AAF2A5E1C3D8F0200140077 /* Album+CoreDataProperties.m in Sources */,
+				2AAF2A651C3F2CA600140077 /* CollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
