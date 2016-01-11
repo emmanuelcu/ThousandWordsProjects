@@ -23,6 +23,10 @@
 		2AAF2A651C3F2CA600140077 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF2A641C3F2CA600140077 /* CollectionViewController.m */; };
 		2AAF2A681C3F329200140077 /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF2A671C3F329200140077 /* PhotoCollectionViewCell.m */; };
 		2AAF2A6A1C40128500140077 /* Cute_dog in Resources */ = {isa = PBXBuildFile; fileRef = 2AAF2A691C40128500140077 /* Cute_dog */; };
+		2AAF2A711C44685200140077 /* Album+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF2A6C1C44685200140077 /* Album+CoreDataProperties.m */; };
+		2AAF2A721C44685200140077 /* Photo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF2A6E1C44685200140077 /* Photo+CoreDataProperties.m */; };
+		2AAF2A731C44685200140077 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF2A701C44685200140077 /* Photo.m */; };
+		2AAF2A771C4469B000140077 /* PictureDataTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF2A761C4469B000140077 /* PictureDataTransformer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +77,14 @@
 		2AAF2A661C3F329200140077 /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewCell.h; sourceTree = "<group>"; };
 		2AAF2A671C3F329200140077 /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
 		2AAF2A691C40128500140077 /* Cute_dog */ = {isa = PBXFileReference; lastKnownFileType = file; name = Cute_dog; path = ../../../../Downloads/Cute_dog; sourceTree = "<group>"; };
+		2AAF2A6B1C44685200140077 /* Album+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Album+CoreDataProperties.h"; path = "../Album+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2AAF2A6C1C44685200140077 /* Album+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Album+CoreDataProperties.m"; path = "../Album+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2AAF2A6D1C44685200140077 /* Photo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Photo+CoreDataProperties.h"; path = "../Photo+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2AAF2A6E1C44685200140077 /* Photo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Photo+CoreDataProperties.m"; path = "../Photo+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2AAF2A6F1C44685200140077 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Photo.h; path = ../Photo.h; sourceTree = "<group>"; };
+		2AAF2A701C44685200140077 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Photo.m; path = ../Photo.m; sourceTree = "<group>"; };
+		2AAF2A751C4469B000140077 /* PictureDataTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PictureDataTransformer.h; path = ../PictureDataTransformer.h; sourceTree = "<group>"; };
+		2AAF2A761C4469B000140077 /* PictureDataTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PictureDataTransformer.m; path = ../PictureDataTransformer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,16 +146,11 @@
 				2AAF2A671C3F329200140077 /* PhotoCollectionViewCell.m */,
 				2AAF2A571C3D8B6B00140077 /* TableViewController.h */,
 				2AAF2A581C3D8B6B00140077 /* TableViewController.m */,
-				2AAF2A601C3F1C4D00140077 /* CoreDataHelper.h */,
-				2AAF2A611C3F1C4D00140077 /* CoreDataHelper.m */,
-				2AAF2A5A1C3D8F0200140077 /* Album+CoreDataProperties.h */,
-				2AAF2A5B1C3D8F0200140077 /* Album+CoreDataProperties.m */,
-				2AAF2A5C1C3D8F0200140077 /* Album.h */,
-				2AAF2A5D1C3D8F0200140077 /* Album.m */,
 				2AAF2A301C3D8A5A00140077 /* Assets.xcassets */,
 				2AAF2A321C3D8A5A00140077 /* LaunchScreen.storyboard */,
 				2AAF2A351C3D8A5A00140077 /* Info.plist */,
 				2AAF2A2D1C3D8A5A00140077 /* ThousandWordsProject.xcdatamodeld */,
+				2AAF2A741C4468AB00140077 /* CoreData */,
 				2AAF2A211C3D8A5A00140077 /* Supporting Files */,
 			);
 			path = ThousandWordsProject;
@@ -174,6 +181,27 @@
 				2AAF2A4B1C3D8A5A00140077 /* Info.plist */,
 			);
 			path = ThousandWordsProjectUITests;
+			sourceTree = "<group>";
+		};
+		2AAF2A741C4468AB00140077 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				2AAF2A751C4469B000140077 /* PictureDataTransformer.h */,
+				2AAF2A761C4469B000140077 /* PictureDataTransformer.m */,
+				2AAF2A601C3F1C4D00140077 /* CoreDataHelper.h */,
+				2AAF2A611C3F1C4D00140077 /* CoreDataHelper.m */,
+				2AAF2A5A1C3D8F0200140077 /* Album+CoreDataProperties.h */,
+				2AAF2A5B1C3D8F0200140077 /* Album+CoreDataProperties.m */,
+				2AAF2A5C1C3D8F0200140077 /* Album.h */,
+				2AAF2A5D1C3D8F0200140077 /* Album.m */,
+				2AAF2A6B1C44685200140077 /* Album+CoreDataProperties.h */,
+				2AAF2A6C1C44685200140077 /* Album+CoreDataProperties.m */,
+				2AAF2A6E1C44685200140077 /* Photo+CoreDataProperties.m */,
+				2AAF2A6D1C44685200140077 /* Photo+CoreDataProperties.h */,
+				2AAF2A6F1C44685200140077 /* Photo.h */,
+				2AAF2A701C44685200140077 /* Photo.m */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,10 +339,14 @@
 				2AAF2A261C3D8A5A00140077 /* AppDelegate.m in Sources */,
 				2AAF2A231C3D8A5A00140077 /* main.m in Sources */,
 				2AAF2A681C3F329200140077 /* PhotoCollectionViewCell.m in Sources */,
+				2AAF2A771C4469B000140077 /* PictureDataTransformer.m in Sources */,
+				2AAF2A731C44685200140077 /* Photo.m in Sources */,
 				2AAF2A591C3D8B6B00140077 /* TableViewController.m in Sources */,
 				2AAF2A2F1C3D8A5A00140077 /* ThousandWordsProject.xcdatamodeld in Sources */,
+				2AAF2A721C44685200140077 /* Photo+CoreDataProperties.m in Sources */,
 				2AAF2A5F1C3D8F0200140077 /* Album.m in Sources */,
 				2AAF2A621C3F1C4D00140077 /* CoreDataHelper.m in Sources */,
+				2AAF2A711C44685200140077 /* Album+CoreDataProperties.m in Sources */,
 				2AAF2A5E1C3D8F0200140077 /* Album+CoreDataProperties.m in Sources */,
 				2AAF2A651C3F2CA600140077 /* CollectionViewController.m in Sources */,
 			);

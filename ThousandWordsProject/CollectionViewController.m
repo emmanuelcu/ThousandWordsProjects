@@ -8,14 +8,28 @@
 
 #import "CollectionViewController.h"
 #import "PhotoCollectionViewCell.h"
+#import "Photo.h"
+#import "PictureDataTransformer.h"
+#import "CoreDataHelper.h"
 
-@interface CollectionViewController ()
+@interface CollectionViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+
+@property (strong,nonatomic) NSMutableArray *photos; // Of UIImages
 
 @end
 
 @implementation CollectionViewController
 
 static NSString * const reuseIdentifier = @"Cell";
+
+- (NSMutableArray *)photos
+{
+    if (!_photos) {
+        _photos = [[NSMutableArray alloc] init];
+        
+    }
+    return _photos;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -43,8 +57,51 @@ static NSString * const reuseIdentifier = @"Cell";
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)cameraButtonItemPressed:(UIBarButtonItem *)sender {
+    
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    
+    picker.delegate = self;
+    
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+    {
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    }else if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeSavedPhotosAlbum])
+    {
+        picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    }
+    
+    [self presentViewController:picker animated:YES completion:nil];
+}
+
+
+#pragma mark - Helper Methods
+
+
+-(Photo *)photoFromImage:(UIImage *)image
+{
+    Photo *photo = [NSEntityDescription insertNewObjectForEntityForName:@"Photo" inManagedObjectContext:[CoreDataHelper managedObjectContext ]];
+    photo.image = image;
+    photo.date = [NSDate date];
+    photo.albumBook = self.album;
+    
+    NSError *error = nil;
+    
+    if (![[photo managedObjectContext] save:&error])
+    {
+        //Error in saving
+        
+        NSLog(@"%@", error);
+    }
+    return photo;
+    
+}
+
+
 
 #pragma mark <UICollectionViewDataSource>
+
+
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -53,7 +110,7 @@ static NSString * const reuseIdentifier = @"Cell";
     PhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     
     cell.backgroundColor = [UIColor whiteColor];
-    cell.imageView.image = [UIImage imageNamed:@"Cute_dog"];
+    cell.imageView.image = self.photos[indexPath.row];  //we change the current method. The one that war programatically was [UIImage imageNamed:@"Cute_dog"]
     
     return cell;
 }
@@ -61,11 +118,34 @@ static NSString * const reuseIdentifier = @"Cell";
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 5;
+    return [self.photos count]; //this was updated to a selected number of photos to the count of number of photos in the album.
 }
 
 #pragma mark <UICollectionViewDelegate>
 
+
+//In this two methods we make the option to enter the picture collection and select one picture.
+
+#pragma mark - UIImagePickerControllerDelegate
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
+{
+    NSLog(@"Finished Picking!");
+    
+    UIImage *image = info [UIImagePickerControllerEditedImage];
+    if (!image) image = info[UIImagePickerControllerOriginalImage];
+    [self.photos addObject:image];
+    [self.collectionView reloadData];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    NSLog(@"Cancel");
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking

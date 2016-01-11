@@ -73,7 +73,13 @@
                             <outlet property="delegate" destination="8tq-6H-cUY" id="sMk-Ai-bfY"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="vfo-ox-Gm6"/>
+                    <navigationItem key="navigationItem" id="vfo-ox-Gm6">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="Okt-fn-kQ9">
+                            <connections>
+                                <action selector="cameraButtonItemPressed:" destination="8tq-6H-cUY" id="RD7-u6-Axd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DGx-LG-4K3" userLabel="First Responder" sceneMemberID="firstResponder"/>

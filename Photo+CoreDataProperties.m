@@ -1,5 +1,5 @@
 //
-//  Album+CoreDataProperties.m
+//  Photo+CoreDataProperties.m
 //  ThousandWordsProject
 //
 //  Created by Emmanuel Cuevas on 1/11/16.
@@ -9,12 +9,12 @@
 //  to delete and recreate this implementation file for your updated model.
 //
 
-#import "Album+CoreDataProperties.h"
+#import "Photo+CoreDataProperties.h"
 
-@implementation Album (CoreDataProperties)
+@implementation Photo (CoreDataProperties)
 
-@dynamic name;
+@dynamic image;
 @dynamic date;
-@dynamic photos;
+@dynamic albumBook;
 
 @end

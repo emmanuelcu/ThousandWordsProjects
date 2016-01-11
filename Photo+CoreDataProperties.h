@@ -1,5 +1,5 @@
 //
-//  Album+CoreDataProperties.m
+//  Photo+CoreDataProperties.h
 //  ThousandWordsProject
 //
 //  Created by Emmanuel Cuevas on 1/11/16.
@@ -9,12 +9,16 @@
 //  to delete and recreate this implementation file for your updated model.
 //
 
-#import "Album+CoreDataProperties.h"
+#import "Photo.h"
 
-@implementation Album (CoreDataProperties)
+NS_ASSUME_NONNULL_BEGIN
 
-@dynamic name;
-@dynamic date;
-@dynamic photos;
+@interface Photo (CoreDataProperties)
+
+@property (nullable, nonatomic, retain) id image;
+@property (nullable, nonatomic, retain) NSDate *date;
+@property (nullable, nonatomic, retain) Album *albumBook;
 
 @end
+
+NS_ASSUME_NONNULL_END
