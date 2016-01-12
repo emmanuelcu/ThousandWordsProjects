@@ -271,6 +271,7 @@
 				TargetAttributes = {
 					2AAF2A1D1C3D8A5A00140077 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 995DAY8VEK;
 					};
 					2AAF2A391C3D8A5A00140077 = {
 						CreatedOnToolsVersion = 7.2;
@@ -487,10 +488,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ThousandWordsProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = IBM.ThousandWordsProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -498,10 +502,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ThousandWordsProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = IBM.ThousandWordsProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -572,6 +579,7 @@
 				2AAF2A501C3D8A5A00140077 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2AAF2A511C3D8A5A00140077 /* Build configuration list for PBXNativeTarget "ThousandWordsProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -580,6 +588,7 @@
 				2AAF2A531C3D8A5A00140077 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2AAF2A541C3D8A5A00140077 /* Build configuration list for PBXNativeTarget "ThousandWordsProjectUITests" */ = {
 			isa = XCConfigurationList;
@@ -588,6 +597,7 @@
 				2AAF2A561C3D8A5A00140077 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
