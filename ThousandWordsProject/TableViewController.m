@@ -9,8 +9,9 @@
 #import "TableViewController.h"
 #import "Album.h"
 #import "CoreDataHelper.h"
+#import "CollectionViewController.h"
 
-@interface TableViewController ()
+@interface TableViewController () <UIAlertViewDelegate>
 
 @end
 
@@ -172,14 +173,27 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    if ([segue.identifier isEqualToString:@"Album Chosen"])
+    {
+        if ([segue.destinationViewController isKindOfClass:[CollectionViewController class]])
+        {
+            NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+            
+            CollectionViewController *targetViewController = segue.destinationViewController;
+            targetViewController.album = self.albums[path.row];
+        }
+    }
+    
+    
 }
-*/
+
 
 @end

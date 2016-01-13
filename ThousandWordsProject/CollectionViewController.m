@@ -99,7 +99,8 @@ static NSString * const reuseIdentifier = @"Cell";
 
 
 
-#pragma mark <UICollectionViewDataSource>
+
+#pragma mark - UICollectionViewDataSource
 
 
 
@@ -109,8 +110,12 @@ static NSString * const reuseIdentifier = @"Cell";
     
     PhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     
+    //Adding the Photo class because the image is not the same class than a photo.
+    
+    Photo *photo = self.photos[indexPath.row];
+    
     cell.backgroundColor = [UIColor whiteColor];
-    cell.imageView.image = self.photos[indexPath.row];  //we change the current method. The one that war programatically was [UIImage imageNamed:@"Cute_dog"]
+    cell.imageView.image =  photo.image;  //this code was removed -- self.photos[indexPath.row];  //we change the current method. The one that war programatically was [UIImage imageNamed:@"Cute_dog"]
     
     return cell;
 }
@@ -134,7 +139,10 @@ static NSString * const reuseIdentifier = @"Cell";
     
     UIImage *image = info [UIImagePickerControllerEditedImage];
     if (!image) image = info[UIImagePickerControllerOriginalImage];
-    [self.photos addObject:image];
+    
+    //Until here all the project works very well. Since this point it could crash.
+    
+    [self.photos addObject: [self photoFromImage:image/*image*/]];
     [self.collectionView reloadData];
     
     [self dismissViewControllerAnimated:YES completion:nil];
